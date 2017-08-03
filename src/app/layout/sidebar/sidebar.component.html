@@ -1,7 +1,10 @@
 <nav class="sidebar-nav">
     <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" [routerLink]="['/']"><i class="fa fa-tachometer"></i> Dashboard</a>
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/']">
+                <i class="fa fa-tachometer"></i> 
+                <span>{{'menu.dashboard.label' | translate}} </span>
+            </a>
         </li>
     </ul>
 </nav>
