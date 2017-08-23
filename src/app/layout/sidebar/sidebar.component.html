@@ -1,9 +1,13 @@
 <nav class="sidebar-nav">
     <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" [routerLink]="['/']">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/']" [routerLinkActiveOptions]= "{exact: true}">
                 <i class="fa fa-tachometer"></i> 
                 <span>{{'menu.dashboard.label' | translate}} </span>
+            </a>
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/sandbox']">
+                <i class="fa fa-wrench"></i> 
+                <span>{{'menu.sandbox.label' | translate}} </span>
             </a>
         </li>
     </ul>
