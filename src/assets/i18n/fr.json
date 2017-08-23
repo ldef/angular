@@ -1,5 +1,7 @@
 {
     "menu.dashboard.label": "Dashboard",
     "menu.sandbox.label": "Sandbox",
-    "dashboard.title": "Dashboard Component"
+    "dashboard.title": "Dashboard Component",
+    "sandbox.grid.label": "Grid",
+    "sandbox.button.label": "Button"
 }
