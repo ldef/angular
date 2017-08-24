@@ -1,14 +1,30 @@
 <nav class="sidebar-nav">
     <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" [routerLink]="['/']" [routerLinkActiveOptions]= "{exact: true}">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/']" [routerLinkActiveOptions]="{exact: true}">
                 <i class="fa fa-tachometer"></i> 
                 <span>{{'menu.dashboard.label' | translate}} </span>
             </a>
-            <a class="nav-link" routerLinkActive="active" [routerLink]="['/sandbox']">
+        </li>
+        <li class="nav-item nav-dropdown" routerLinkActive="open">
+            <a class="nav-link nav-dropdown-toggle" routerLinkActive="active" [routerLink]="['/sandbox']">
                 <i class="fa fa-wrench"></i> 
                 <span>{{'menu.sandbox.label' | translate}} </span>
             </a>
+            <ul class="nav-dropdown">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/sandbox/grid']">
+                        <i class="fa fa-th"></i>  
+                        <span>{{'menu.grid.label' | translate}}</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/sandbox/button']">
+                        <i class="fa fa-tags"></i>  
+                        <span>{{'menu.button.label' | translate}}</span>
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 </nav>
