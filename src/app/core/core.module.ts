@@ -30,7 +30,8 @@ export function translateFactory(http: HttpClient) {
   ]
 })
 export class CoreModule {
-  constructor(translateService: TranslateService, storageService: StorageService) {
+  constructor(translateService: TranslateService,
+    storageService: StorageService) {
 
     // Get locale in locale storage
     const locale = storageService.getItem<string>(environment.language.key) || environment.language.default;
