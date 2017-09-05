@@ -12,20 +12,28 @@
   border-radius: 1rem !important;
 }
 
-// temp fix for Vue-Strap
+// temp fix for Vue & React
 
 // Open state for the dropdown
-.open {
+.open, .show {
   // Show the menu
   > .dropdown-menu {
     display: block;
   }
-
+  > .dropdown-menu-right {
+    right: 0;
+    left: auto; // Reset the default from `.dropdown-menu`
+  }
   // Remove the outline when :focus is triggered
   > a {
     outline: 0;
   }
 }
+
+//
+//.modal-open .modal {
+//  display: block;
+//}
 
 // navbar dropdown fix
 .navbar .dropdown-toggle {
@@ -35,4 +43,8 @@
     height: $navbar-height - 20px;
     margin: 0 10px;
   }
+}
+
+.card-block {
+  @extend .card-body;
 }
