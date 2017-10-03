@@ -3,7 +3,9 @@
     "menu.sandbox.label": "Sandbox",
     "menu.grid.label": "Grid",
     "menu.button.label": "Button",
+
     "dashboard.title": "Dashboard Component",
+    
     "sandbox.grid.label": "Grid",
     "sandbox.button.label": "Button"
 }
