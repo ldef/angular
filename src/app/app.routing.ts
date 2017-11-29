@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AuthenticationModule } from './authentication/authentication.module';
 import { LoginComponent } from './authentication/login/login.component';
+import { LogoutComponent } from './authentication/logout/logout.component';
 import { AuthenticationGuard } from './authentication/guards/authentication.guard';
 import { LayoutComponent } from './layout/layout.component';
 
@@ -11,7 +12,8 @@ export const routes: Routes = [
   {
     path: '',
     children: [
-     { path: 'login', component: LoginComponent }
+     { path: 'login', component: LoginComponent },
+     { path: 'logout', component: LogoutComponent }
     ]
   },
   {

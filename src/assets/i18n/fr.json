@@ -1,15 +1,16 @@
 {
-    "menu.dashboard.label": "Dashboard",
-    "menu.sandbox.label": "Sandbox",
-    "menu.grid.label": "Grid",
-    "menu.button.label": "Button",
+    "menu.dashboard.label": "Tableau de bord",
+    "menu.sandbox.label": "Bakasable",
+    "menu.grid.label": "Grille",
+    "menu.button.label": "Boutons",
+    "menu.logout.label": "Déconnexion",
 
     "login.title": "Connexion",
     "login.username.label": "Nom utilisateur",
     "login.password.label": "Mot de passe",
 
-    "dashboard.title": "Dashboard Component",
+    "dashboard.title": "Tabeau de bord Component",
     
-    "sandbox.grid.label": "Grid",
-    "sandbox.button.label": "Button"
+    "sandbox.grid.label": "Grille",
+    "sandbox.button.label": "Boutons"
 }
