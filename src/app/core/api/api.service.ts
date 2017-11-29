@@ -1,6 +1,4 @@
 import { HttpHeaders, HttpClient, HttpParams } from '@angular/common/http';
-import { ToastrService } from 'ngx-toastr';
-import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs/Rx';
 
 import { environment } from '../../../environments/environment';
@@ -18,14 +16,10 @@ export abstract class ApiService {
     * @constructor
     * @param {AuthHttp} authHttp The authentification http service.
     * @param {string} path api path.
-	* @param {ToastrService} toastr toast manager to display toast.
-    * @param {TranslateService} translate ngx translate service to manage translation.
     */
     constructor(
         protected http: HttpClient,
-        protected path: string,
-        protected toastr: ToastrService,
-        protected translate: TranslateService) { }
+        protected path: string) { }
 
     /**
      * Get object by id.
@@ -67,13 +61,13 @@ export abstract class ApiService {
      * @param {Object} parameters search filter list
      */
     private getUrlParameters(parameters): HttpParams {
-        const urlParameters = new HttpParams();
+        let urlParameters = new HttpParams();
         // Manage query parameters by a generic object
         if (parameters) {
             for (const key of Object.keys(parameters)) {
                 const value = this.checkProperty(parameters[key]);
                 if (value && value !== '' && value.length !== 0) {
-                    urlParameters.set(key, value);
+                    urlParameters = urlParameters.append(key, value);
                 }
             }
         }

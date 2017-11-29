@@ -4,12 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { SandboxComponent } from './sandbox.component';
 import { GridComponent } from './grid/grid.component';
 import { ButtonComponent } from './button/button.component';
+import { PostListComponent } from './posts/list/post-list.component';
 
 export const routes: Routes = [
   { path: '', component: SandboxComponent, children: [
     { path: '', component: GridComponent },
     { path: 'grid', component: GridComponent },
     { path: 'button', component: ButtonComponent },
+    { path: 'posts', component: PostListComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' }
   ]},
 ];

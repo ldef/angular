@@ -12,5 +12,5 @@ export const environment = {
   page: {
     limit: 10
   },
-  apiUrl: ''
+  apiUrl: 'https://reqres.in/api'
 };

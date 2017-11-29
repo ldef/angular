@@ -4,6 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
 
 import { environment } from '../../../environments/environment';
+import { ApiService } from 'app/core/api/api.service';
 
 /**
  * Represents the sort class
@@ -85,7 +86,8 @@ export abstract class BaseListComponent<TEntity> implements OnInit {
    */
   constructor(
     protected toastr: ToastrService,
-    protected translate: TranslateService
+    protected translate: TranslateService,
+    protected apiService: ApiService
   ) {
   }
 
@@ -117,15 +119,18 @@ export abstract class BaseListComponent<TEntity> implements OnInit {
    * @param {ListFormParams} parameters The current search parameters.
    * @returns {Observable<TEntity[]>}
    */
-  abstract getAll(parameters?: ListFormParams): Observable<TEntity[]>;
+  getAll(parameters?: ListFormParams): Observable<TEntity[]> {
+    return this.apiService.query(parameters);
+  };
 
   /**
    * Gets the total number of element.
    * @method
-   * @param {string} search The searching terms.
    * @returns {Observable<TotalModel>}
    */
-  abstract getTotal(search?: string): Observable<TotalModel>;
+  getTotal(): Observable<TotalModel> {
+    return this.apiService.count();
+  };
 
   /**
    * Gets the sort direction for a column.

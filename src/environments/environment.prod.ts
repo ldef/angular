@@ -6,5 +6,6 @@ export const environment = {
   },
   page: {
     limit: 10
-  }
+  },
+  apiUrl: ''
 };
