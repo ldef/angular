@@ -9,4 +9,8 @@ export const environment = {
     key: 'locale',
     default: 'fr'
   },
+  page: {
+    limit: 10
+  },
+  apiUrl: ''
 };

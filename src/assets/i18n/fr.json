@@ -4,6 +4,10 @@
     "menu.grid.label": "Grid",
     "menu.button.label": "Button",
 
+    "login.title": "Connexion",
+    "login.username.label": "Nom utilisateur",
+    "login.password.label": "Mot de passe",
+
     "dashboard.title": "Dashboard Component",
     
     "sandbox.grid.label": "Grid",
