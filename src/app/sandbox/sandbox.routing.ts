@@ -13,6 +13,7 @@ export const routes: Routes = [
     { path: 'grid', component: GridComponent },
     { path: 'button', component: ButtonComponent },
     { path: 'posts', component: PostListComponent },
+    { path: 'posts/new', component: PostEditComponent },
     { path: 'posts/:id', component: PostEditComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' }
   ]},
