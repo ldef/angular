@@ -1,7 +1,5 @@
 import { OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { ToastrService } from 'ngx-toastr';
-import { TranslateService } from '@ngx-translate/core';
 
 import { environment } from '../../../environments/environment';
 import { ApiService } from 'app/core/api/api.service';
@@ -81,12 +79,9 @@ export abstract class BaseListComponent<TEntity> implements OnInit {
   /**
    * Initializes a new instance of the {BaseListComponent}
    * @constructor
-   * @param {ToastrService} toastr The angular toastr.
-   * @param {TranslateService} translate The angular translate service.
+   * @param {ApiService} apiService The http service to use.
    */
   constructor(
-    protected toastr: ToastrService,
-    protected translate: TranslateService,
     protected apiService: ApiService
   ) {
   }

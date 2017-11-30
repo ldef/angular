@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateService, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { PaginationModule } from 'ngx-bootstrap';
+import { PaginationModule, PaginationConfig } from 'ngx-bootstrap';
 
 import { StorageService } from './storage/storage.service';
+import { BasePaginationConfig } from './crud/base-pagination.config';
 import { environment } from '../../environments/environment';
 
 // Translate options
@@ -29,7 +30,11 @@ export function translateFactory(http: HttpClient) {
     PaginationModule
   ],
   providers: [
-    StorageService
+    StorageService,
+    {
+      provide: PaginationConfig,
+      useClass: BasePaginationConfig
+    }
   ]
 })
 export class CoreModule {

@@ -71,7 +71,7 @@ export class AuthenticationService {
     login(username: string, password: string): Observable<any> {
         const data = {
             token: 'qskfhkljsqdfhklj',
-        }
+        };
 
         // store authentication informations
         this.authInfo = {

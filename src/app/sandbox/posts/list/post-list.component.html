@@ -8,14 +8,4 @@
     </tbody>
 </table>
 
-<pagination 
-    [boundaryLinks]="true" 
-    [totalItems]="count" 
-    [(ngModel)]="currentPage"
-    (pageChanged)="onPageChanged($event)"
-    class="pagination-sm"
-    previousText="&lsaquo;" 
-    nextText="&rsaquo;" 
-    firstText="&laquo;" 
-    lastText="&raquo;">
-</pagination>
+<pagination [totalItems]="count" [(ngModel)]="currentPage" (pageChanged)="onPageChanged($event)"></pagination>
