@@ -37,6 +37,8 @@ export class PostService extends ApiService {
      * @returns {Observable<any>}
      */
     count(parameters?: Object): Observable<any> {
-        return super.query(parameters).map(data => data.total);
+        return super.query(parameters).map(data => {
+            return { count: data.total };
+        });
     }
 }

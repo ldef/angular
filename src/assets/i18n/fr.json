@@ -3,6 +3,7 @@
     "menu.sandbox.label": "Bakasable",
     "menu.grid.label": "Grille",
     "menu.button.label": "Boutons",
+    "menu.posts.label": "Posts",
     "menu.logout.label": "Déconnexion",
 
     "login.title": "Connexion",

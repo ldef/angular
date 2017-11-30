@@ -121,7 +121,7 @@ export abstract class BaseListComponent<TEntity> implements OnInit {
    */
   getAll(parameters?: ListFormParams): Observable<TEntity[]> {
     return this.apiService.query(parameters);
-  };
+  }
 
   /**
    * Gets the total number of element.
@@ -130,7 +130,7 @@ export abstract class BaseListComponent<TEntity> implements OnInit {
    */
   getTotal(): Observable<TotalModel> {
     return this.apiService.count();
-  };
+  }
 
   /**
    * Gets the sort direction for a column.
@@ -166,10 +166,10 @@ export abstract class BaseListComponent<TEntity> implements OnInit {
   /**
    * Occurrend when page changed.
    * @method
-   * @param {number} pageIndex The new page index.
+   * @param $event The event triggered.
    */
-  onPageChanged(pageIndex: number) {
-    this.currentPage = pageIndex;
+  onPageChanged($event) {
+    this.currentPage = $event.page;
     this.initTable();
   }
 }

@@ -1,11 +1,4 @@
 <table class="table table-striped" *ngIf="data?.length">
-    <thead class="bg-primary">
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
     <tbody>
         <tr *ngFor="let d of data">
             <td>{{d.id}}</td>
@@ -14,3 +7,15 @@
         </tr>
     </tbody>
 </table>
+
+<pagination 
+    [boundaryLinks]="true" 
+    [totalItems]="count" 
+    [(ngModel)]="currentPage"
+    (pageChanged)="onPageChanged($event)"
+    class="pagination-sm"
+    previousText="&lsaquo;" 
+    nextText="&rsaquo;" 
+    firstText="&laquo;" 
+    lastText="&raquo;">
+</pagination>

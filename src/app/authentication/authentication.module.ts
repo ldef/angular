@@ -43,6 +43,6 @@ function jwtOptionsFactory(injector: Injector) {
     tokenGetter: () => {
       return injector.get(AuthenticationService).token;
     }
-  }
+  };
 }
 

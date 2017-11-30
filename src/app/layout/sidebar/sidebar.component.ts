@@ -11,9 +11,9 @@ import { Component } from '@angular/core';
  */
 export class SidebarComponent {
 
-	 /**
-	  * Initializes a new instance of the SidebarComponent class.
-	  * @constructor
-	  */
+	/**
+	 * Initializes a new instance of the SidebarComponent class.
+	 * @constructor
+	 */
     constructor() { }
 }

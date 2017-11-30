@@ -1,4 +1,4 @@
-import { TestBed, async, inject } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
 import { StorageService } from './storage.service';
 const DATA = { user: 'test' };
 const KEY = 'key';

@@ -14,10 +14,10 @@ import { AuthenticationService } from '../authentication.service';
     templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
-	/** Gets or sets the login form group. @property {FormGroup} */
+    /** Gets or sets the login form group. @property {FormGroup} */
     loginForm: FormGroup;
 
-	/**
+    /**
 	* Initializes a new instance of the LoginComponent class.
 	* @constructor
 	* @param {Router} router The current router.
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
         private toastr: ToastrService) { }
 
 
-	/**
+    /**
 	 * Execute when component is initialized.
 	 * @method
 	 */
