@@ -4,13 +4,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 /**
- * Service to manage currencies.
+ * Service to manage posts.
  * @class
  */
 @Injectable()
 export class PostService extends ApiService {
     /**
-    * Initializes a new instance of the CurrencyService.
+    * Initializes a new instance of the PostService.
     * @constructor
     * @param {HttpClient} http The authentification http service.
     * @param {ToastrService} toastr toast manager to display toast after platform saving.
@@ -21,7 +21,7 @@ export class PostService extends ApiService {
     }
 
     /**
-     * List object for a giving entity.
+     * List object for a giving posts.
      * @method
      * @param {Object} parameters search filter list
      * @returns {Observable<any>}
@@ -31,7 +31,7 @@ export class PostService extends ApiService {
     }
 
     /**
-     * Count objects for a giving entity.
+     * Count objects for a giving posts.
      * @method
      * @param {Object} parameters search filter list
      * @returns {Observable<any>}
@@ -40,5 +40,14 @@ export class PostService extends ApiService {
         return super.query(parameters).map(data => {
             return { count: data.total };
         });
+    }
+
+    /**
+     * Get post by id.
+     * @param id : entity id
+     * @returns {Observable<any>}
+     */
+    get(id: number): Observable<any> {
+        return super.get(id).map(data => data.data);
     }
 }

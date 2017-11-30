@@ -5,6 +5,7 @@ import { SandboxComponent } from './sandbox.component';
 import { GridComponent } from './grid/grid.component';
 import { ButtonComponent } from './button/button.component';
 import { PostListComponent } from './posts/list/post-list.component';
+import { PostEditComponent } from './posts/edit/post-edit.component';
 import { PostService } from './posts/post.service';
 import { SharedModule } from 'app/shared/shared.module';
 
@@ -13,7 +14,8 @@ import { SharedModule } from 'app/shared/shared.module';
     GridComponent,
     SandboxComponent,
     ButtonComponent,
-    PostListComponent
+    PostListComponent,
+    PostEditComponent
   ],
   imports: [
     SharedModule,

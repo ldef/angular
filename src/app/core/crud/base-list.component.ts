@@ -2,7 +2,8 @@ import { OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { environment } from '../../../environments/environment';
-import { ApiService } from 'app/core/api/api.service';
+import { ApiService } from '../api/api.service';
+import { ApiModel } from '../api/api.model';
 
 /**
  * Represents the sort class
@@ -41,7 +42,7 @@ export class TotalModel {
  * Base list component for managing pagination and sorting for a list.
  * @class
  */
-export abstract class BaseListComponent<TEntity> implements OnInit {
+export abstract class BaseListComponent<TEntity extends ApiModel> implements OnInit {
   /** Gets or sets the data list. @property {TEntity[]} */
   data: TEntity[];
 

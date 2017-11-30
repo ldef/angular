@@ -4,8 +4,13 @@
             <td>{{d.id}}</td>
             <td>{{d.first_name}}</td>
             <td>{{d.last_name}}</td>
+            <td>
+                <a [routerLink]="[d.id]">
+                    <i class="fa fa-pencil"></i>
+                </a>
+            </td>
         </tr>
     </tbody>
 </table>
 
-<pagination [totalItems]="count" [(ngModel)]="currentPage" (pageChanged)="onPageChanged($event)"></pagination>
+<pagination class="pull-right" [totalItems]="count" [(ngModel)]="currentPage" (pageChanged)="onPageChanged($event)"></pagination>

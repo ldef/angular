@@ -5,6 +5,7 @@ import { SandboxComponent } from './sandbox.component';
 import { GridComponent } from './grid/grid.component';
 import { ButtonComponent } from './button/button.component';
 import { PostListComponent } from './posts/list/post-list.component';
+import { PostEditComponent } from './posts/edit/post-edit.component';
 
 export const routes: Routes = [
   { path: '', component: SandboxComponent, children: [
@@ -12,6 +13,7 @@ export const routes: Routes = [
     { path: 'grid', component: GridComponent },
     { path: 'button', component: ButtonComponent },
     { path: 'posts', component: PostListComponent },
+    { path: 'posts/:id', component: PostEditComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' }
   ]},
 ];

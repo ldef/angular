@@ -55,6 +55,17 @@ export abstract class ApiService {
     }
 
     /**
+     * Create or update an object
+     * If the object contain an ID just do a PUT, else do a POST
+     * @method
+     * @param {any} obj
+     * @returns {Observable<any>}
+     */
+    save(object: any): Observable<any> {
+        return Observable.of({});
+    }
+
+    /**
      * Generate url parameters.
      * Use in query and count requests.
      * @method
