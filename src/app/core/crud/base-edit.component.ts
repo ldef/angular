@@ -13,7 +13,7 @@ import { ApiModel } from '../api/api.model';
 export abstract class BaseEditComponent<T extends ApiModel> implements OnInit {
     /** Reactive form group @property {FormGroup} */
     form: FormGroup;
-    /** Current entity @property {ApiModel} */
+    /** Current entity @property {T} */
     entity: T;
 
     /**

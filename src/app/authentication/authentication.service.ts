@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
-import 'rxjs/add/observable/of';
 
 import { environment } from '../../environments/environment';
 import { StorageService } from '../core/storage/storage.service';

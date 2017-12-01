@@ -1,20 +1,20 @@
 <form [formGroup]="form" *ngIf="form" (ngSubmit)="save()" autocomplete="off">
     <div class="row">
-        <div class="form-group col-md-6" [ngClass]="{'has-danger': form.controls['firstname'].invalid && form.controls['firstname'].touched}">
+        <div class="form-group col-md-6">
             <div class="input-group">
-                <label class="input-group-addon required-label">{{"post.firstname.label" | translate}}</label>
+                <label class="input-group-addon required-label">{{".label" | translate}}</label>
                 <input formControlName="firstname" class="form-control" type="text" maxlength="50">
             </div>
-            <small class="form-control-label" *ngIf="form.controls['firstname'].invalid && form.controls['firstname'].touched">
+            <small class="help-block" *ngIf="form.controls['firstname'].invalid && form.controls['firstname'].touched">
                 {{"error.field.required" | translate }}<br>
             </small>
         </div>
-        <div class="form-group col-md-6" [ngClass]="{'has-danger': form.controls['lastname'].invalid && form.controls['lastname'].touched}">
+        <div class="form-group col-md-6">
             <div class="input-group">
-                <label class="input-group-addon required-label">{{"areas.name.label" | translate}}</label>
+                <label class="input-group-addon required-label">{{".label" | translate}}</label>
                 <input formControlName="lastname" class="form-control" type="text" maxlength="50">
             </div>
-            <small class="form-control-label" *ngIf="form.controls['lastname'].invalid && form.controls['lastname'].touched">
+            <small class="help-block" *ngIf="form.controls['lastname'].invalid && form.controls['lastname'].touched">
                 {{"error.field.required" | translate }}<br>
             </small>
         </div>
