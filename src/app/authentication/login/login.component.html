@@ -2,16 +2,16 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-6 col-sm-8 col-12">
-                <form class="card-block" [formGroup]="loginForm" novalidate (ngSubmit)="login()"> 
+                <form [formGroup]="loginForm" novalidate (ngSubmit)="login()"> 
                     <h3 class="p-2 bg-primary">
                         <i class="fa fa-user-o"></i>
                         <span>{{ 'login.title' | translate }}</span>
                     </h3>
-                    <div class="input-group mb-2" [ngClass]="{'has-danger':!loginForm.controls['username'].valid && loginForm.controls['username'].touched}">
+                    <div class="input-group mb-2">
                         <input autofocus placeholder="{{ 'login.username.label' | translate }}" 
                             formControlName="username" type="text" class="form-control form-control-lg">
                     </div>
-                    <div class="input-group mb-2" [ngClass]="{'has-danger':!loginForm.controls['password'].valid && loginForm.controls['password'].touched}">
+                    <div class="input-group mb-2">
                         <input id="password" formControlName="password" placeholder="{{ 'login.password.label' | translate }}" 
                             type="password" class="form-control form-control-lg">
                     </div>
