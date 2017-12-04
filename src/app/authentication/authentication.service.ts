@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { StorageService } from '../core/storage/storage.service';
 import { AuthModel } from './authentication.model';
+import 'rxjs/add/observable/of';
 
 /**
  * Represents the authentication service.
