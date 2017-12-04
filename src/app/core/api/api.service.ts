@@ -77,7 +77,7 @@ export abstract class ApiService {
         if (parameters) {
             for (const key of Object.keys(parameters)) {
                 const value = this.checkProperty(parameters[key]);
-                if (value && value !== '' && value.length !== 0) {
+                if (value !== undefined && value !== '' && value.length !== 0) {
                     urlParameters = urlParameters.append(key, value);
                 }
             }
