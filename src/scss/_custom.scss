@@ -1,4 +1,14 @@
 // Here you can add other styles
+// Sidebar
+.sidebar{
+    box-shadow: 4px 0 4px rgba(0,0,0,.3);
+}
+
+.sidebar-hidden .sidebar{
+    box-shadow: none;
+}
+
+// Forms
 .form-control.ng-invalid.ng-touched {
     border-color: theme-color('danger');
 }
