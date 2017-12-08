@@ -4,7 +4,7 @@ import { Directive, HostListener } from '@angular/core';
 * Allows the sidebar to be toggled via click.
 */
 @Directive({
-  selector: '.sidebar-toggler',
+  selector: '[appSidebarToggler]',
 })
 export class SidebarToggleDirective {
   /** Test if the sidebar div is shown @property{boolean}*/
@@ -31,15 +31,10 @@ export class SidebarToggleDirective {
 }
 
 @Directive({
-  selector: '.mobile-sidebar-toggler',
+  selector: '[appMobileSidebarToggler]',
 })
 export class MobileSidebarToggleDirective {
   constructor() { }
-
-  // Check if element has class
-  private hasClass(target: any, elementClassName: string) {
-    return new RegExp('(\\s|^)' + elementClassName + '(\\s|$)').test(target.className);
-  }
 
   /**
    * Toggle the sidebar for mobiles

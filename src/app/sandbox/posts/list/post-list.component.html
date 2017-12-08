@@ -1,4 +1,12 @@
 <table class="table table-striped" *ngIf="data?.length">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>#</th>
+        </tr>
+    </thead>
     <tbody>
         <tr *ngFor="let d of data">
             <td>{{d.id}}</td>
